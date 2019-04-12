@@ -1,5 +1,4 @@
 # How to secure API Gateway
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Your APIs are publicly accessible. What is the best way to secure the API Gateway. In addition to securing access to the API GW, how can you to throttle high volume requests.
 
@@ -14,7 +13,7 @@ Your APIs are publicly accessible. What is the best way to secure the API Gatewa
 1. Create a own aws signature version or lambda authorizes to support your own bearer token stategy.
 1. Use API Gateway throttling settings for each method or route in your  APIs for rate limit and a burst for limit per second for each method in your REST APIs and each route in WebSocket APIs.
    - For example, API owners can set a rate limit of 1,000 requests per second for a specific method in their REST APIs, and also configure Amazon API Gateway to handle a burst of 2,000 requests per second for a few seconds
- 1. Use Usage plans to provide API keys to your customers and then set throttling limits for individual API keys.
+ 1. Use `Usage Plans` to provide API keys to your customers and then set throttling limits for individual API keys.
     - Throttling ensures that API traffic is controlled to help your backend services maintain performance and availability.
   
 
