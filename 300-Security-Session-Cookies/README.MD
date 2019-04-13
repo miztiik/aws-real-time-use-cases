@@ -1,11 +1,14 @@
-# How to Secure Section-cookies
-I was asked by my manager how you will secure when hacker have access to our cookie and Think about an authentication cookie. how to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
+# How to Secure Session-Cookies
+I was asked by my manager how you will secure when hacker have access to our cookie and Think about an authentication Cookie. how to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
+
+![Security-Session-Cookies](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/300-Security-Session-Cookies/Images/Security-Cookies.jpeg) 
+
 # Steps to enhance Security of cookies
 
 ### 1. HTTP and HTTPS
 If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to see our traffic and he can able to modify (Man in the middle attack).
 ### TODO
-1. HTTPS is a secure version of HTTP – it uses SSL/TLS to protect the data of the application layer. 
+1. HTTPS is a secure version of HTTP ï¿½ it uses SSL/TLS to protect the data of the application layer. 
 1. ensure all traffic is encrypted, to prevent potential intercept of sensitive data
 1. If we use HTTPS we can achieve the following properties
    - Authentication
@@ -14,12 +17,12 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
 
 ### 2. Secure Flag
 
-   Use The cookie with a secure flag will only be sent over an HTTPS connection
+   Use The Cookie with a secure flag will only be sent over an HTTPS connection
 
 ### 3. HttpOnly Flag
 
-When we send authentication cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
-  - Use HttpOnly flag to Prevent this kind of problem. When an HttpOnly flag is used, JavaScript will not be able to read this authentication cookie in case of XSS exploitation.
+When we send authentication Cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
+  - Use HttpOnly flag to Prevent this kind of problem. When an HttpOnly flag is used, JavaScript will not be able to read this authentication Cookie in case of XSS exploitation.
 ## Steps to Reproduce
 ### 1. Checking for buffer overflow vulnerability
   - Capture the request
