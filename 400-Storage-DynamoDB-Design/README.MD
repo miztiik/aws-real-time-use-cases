@@ -8,6 +8,7 @@ Your client plans to use chat bot to provide a 24x7 digital experience to his cu
  - Top `N` queries made by `User x`
  - `Min`, `Avg`, `Max` queries for `N` time period
 
+![Configuration Drift Detection](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/400-Storage-DynamoDB-Design/images/400-Storage-DynamoDB-Design.png)
 
 ## Next Steps
 1. What actions will you take to ?
