@@ -7,6 +7,7 @@ Your manager asks you a way to secure cookies, especially securing authenticatio
 
 ### 1. HTTP and HTTPS
 If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to see our traffic and he can able to modify (Man in the middle attack).
+
 ### TODO
 1. HTTPS is a secure version of HTTP – it uses SSL/TLS to protect the data of the application layer. 
 1. ensure all traffic is encrypted, to prevent potential intercept of sensitive data
@@ -21,16 +22,20 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
 
 ### 3. HttpOnly Flag
 
-  When we send authentication Cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
+When we send authentication Cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
   - Use HttpOnly flag to Prevent this kind of problem. When an HttpOnly flag is used, JavaScript will not be able to read this authentication cookie in case of XSS exploitation.
+  
 ## Steps to Reproduce
+
 ### 1. Checking for buffer overflow vulnerability
+
   - Capture the request
   - Detect hidden or non-obvious inputs such as HTTP parameters, POST data, hidden form field values, predefined radio or selection values.
   - Append the parameter value as many as possible.
      - `Example= 111111111111111111111111111111111111111111111111111....`
   - Forward the request and check the response
-*Acceptance Criteria* : Application parameter should not accept the uwanted length values.
+  
+**Acceptance Criteria** : Application parameter should not accept the uwanted length values.
 
 ### 2. Checking for malicious file upload vulnerability
 
@@ -39,7 +44,7 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
   - Try to upload calc.exe file to the web application and need to test for both endings that don't match, 
     - `Example= Upload a jpg that is actually a php or upload a polyglot file.`
          
-*Acceptance Criteria*: Application should not allow you to upload *.exe* or any other file formats which are not whitelisted.
+**Acceptance Criteria**: Application should not allow you to upload *.exe* or any other file formats which are not whitelisted.
 
 ### 3. Checking for HTTP Response Splitting
   - Capture the request.
@@ -51,8 +56,10 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
       0%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContentType:%20text/html%0d%0aContent-Length:%20
       35%0d%0a%0d%0a<html>Sorry,%20System%20Down</html>
       ```
-*Acceptance Criteria*: The web cache should not see two different responses
+**Acceptance Criteria**: The web cache should not see two different responses
+
 ### 4. Checking for HTTP Smuggling
+
   - Capture the request.
   - Change the req as shown in below ex
       ```
@@ -69,7 +76,7 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
       <CRLF>
       ```
 
-*Acceptance Criteria*: Application should not accept the change requreied.
+**Acceptance Criteria**: Application should not accept the change requreied.
 
 
 
