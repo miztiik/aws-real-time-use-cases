@@ -28,16 +28,18 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
   - Capture the request
   - Detect hidden or non-obvious inputs such as HTTP parameters, POST data, hidden form field values, predefined radio or selection values.
   - Append the parameter value as many as possible.
-     - `ex-id=111111111111111111111111111111111111111111111111111....`
+     - `Example= 111111111111111111111111111111111111111111111111111....`
   - Forward the request and check the response
+*Acceptance Criteria* : Application parameter should not accept the uwanted length values.
 
 ### 2. Checking for malicious file upload vulnerability
 
   - Identify the file upload functionality in your web application.
   - Check for the file formats approved for uploading.
-  - Try to upload calc.exe file to the web application and need to test for both endings that don't match, i.e. Upload a jpg that is actually a php or upload a polyglot file.
+  - Try to upload calc.exe file to the web application and need to test for both endings that don't match, 
+    - `Example= Upload a jpg that is actually a php or upload a polyglot file.`
          
-Application should not allow you to upload .exe or any other file formats which are not whitelisted.
+*Acceptance Criteria*: Application should not allow you to upload *.exe* or any other file formats which are not whitelisted.
 
 ### 3. Checking for HTTP Response Splitting
   - Capture the request.
@@ -49,7 +51,7 @@ Application should not allow you to upload .exe or any other file formats which 
       0%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContentType:%20text/html%0d%0aContent-Length:%20
       35%0d%0a%0d%0a<html>Sorry,%20System%20Down</html>
       ```
-The web cache should not see two different responses
+*Acceptance Criteria*: The web cache should not see two different responses
 ### 4. Checking for HTTP Smuggling
   - Capture the request.
   - Change the req as shown in below ex
@@ -67,7 +69,7 @@ The web cache should not see two different responses
       <CRLF>
       ```
 
-Application should not accept the change requreied.
+*Acceptance Criteria*: Application should not accept the change requreied.
 
 
 
