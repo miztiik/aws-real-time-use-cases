@@ -1,5 +1,5 @@
 # How to Secure Session-Cookies
-Your manager asks you a way to secure cookies, especially security authentication cookies against man-in-the-middle attack (MITM). How to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
+Your manager asks you a way to secure cookies, especially securing authentication cookies against man-in-the-middle attack (MITM). How to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
 
 ![Security-Session-Cookies](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/300-Security-Session-Cookies/Images/Security-Cookies.jpeg) 
 
