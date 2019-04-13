@@ -1,5 +1,5 @@
 # How to Secure Session-Cookies
-I was asked by my manager how you will secure when hacker have access to our Cookie and Think about an authentication cookie. how to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
+Your manager asks you a way to secure cookies, especially security authentication cookies against man-in-the-middle attack (MITM). How to protect the cookie from a hacker eavesdropping on the communication channel between the browser and the server.
 
 ![Security-Session-Cookies](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/300-Security-Session-Cookies/Images/Security-Cookies.jpeg) 
 
@@ -21,13 +21,14 @@ If we use HTTP protocol, the traffic is sent in plaintext, Hacker get access to 
 
 ### 3. HttpOnly Flag
 
-When we send authentication Cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
+  When we send authentication Cookie and assume that XSS (cross-site scripting) vulnerability is present in the application.
   - Use HttpOnly flag to Prevent this kind of problem. When an HttpOnly flag is used, JavaScript will not be able to read this authentication cookie in case of XSS exploitation.
 ## Steps to Reproduce
 ### 1. Checking for buffer overflow vulnerability
   - Capture the request
   - Detect hidden or non-obvious inputs such as HTTP parameters, POST data, hidden form field values, predefined radio or selection values.
-  - Append the parameter value as many as possible.ex-id=111111111111111111111111111111111111111111111111111....
+  - Append the parameter value as many as possible.
+     - `ex-id=111111111111111111111111111111111111111111111111111....`
   - Forward the request and check the response
 
 ### 2. Checking for malicious file upload vulnerability
@@ -42,29 +43,29 @@ Application should not allow you to upload .exe or any other file formats which 
   - Capture the request.
   - Check for Location and Set-Cookie headers.
   - Append the headers value as
-Location: http://victim.com/main.jsp?interface=advanced%0d%0aContent-Length:%20
-0%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContentType:%20text/html%0d%0aContent-Length:%20
-35%0d%0a%0d%0a<html>Sorry,%20System%20Down</
-html>
+      Location: 
+      ```
+      http://victim.com/main.jsp?interface=advanced%0d%0aContent-Length:%20
+      0%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContentType:%20text/html%0d%0aContent-Length:%20
+      35%0d%0a%0d%0a<html>Sorry,%20System%20Down</html>
+      ```
 The web cache should not see two different responses
 ### 4. Checking for HTTP Smuggling
   - Capture the request.
   - Change the req as shown in below ex
-POST /target.asp HTTP/1.1 <-- Request #1
-Host: target
-Connection: Keep-Alive
-Content-Length: 49225
-<CRLF>
-<49152 bytes of garbage>
-POST /target.asp HTTP/1.0 <-- Request #2
-Connection: Keep-Alive
-Content-Length: 33
-<CRLF>
-POST /target.asp HTTP/1.0 <-- Request #3
-xxxx: POST /scripts/..%c1%1c../winnt/system32/cmd.exe?/c+dir
-HTTP/1.0 <-- Request #4
-Connection: Keep-Alive
-<CRLF>
+      ```
+      POST /target.asp HTTP/1.1 <-- Request #1 Host: target
+      Connection: Keep-Alive
+      Content-Length: 49225
+      <CRLF>
+      <49152 bytes of garbage>
+      POST /target.asp HTTP/1.0 <-- Request #2 Connection: Keep-Alive
+      Content-Length: 33
+      <CRLF>
+      POST /target.asp HTTP/1.0 <-- Request #3 xxxx: POST /scripts/..%c1%1c../winnt/system32/cmd.exe?/c+dir
+      HTTP/1.0 <-- Request #4 Connection: Keep-Alive
+      <CRLF>
+      ```
 
 Application should not accept the change requreied.
 
