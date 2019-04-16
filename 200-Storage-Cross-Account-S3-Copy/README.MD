@@ -35,20 +35,20 @@ Step 3. Destination Account S3bucket
     ]
 }
 
-# Note : The Source account's ACCOUNT NUMBER can be figured by going to the SOURCE ACCOUNT's COSOLE, then click SUPPORT, choose Support center and there you will find the account number as : xxxxxxxxxxxx
+Note : The Source account's ACCOUNT NUMBER can be figured by going to the SOURCE ACCOUNT's CONSOLE, then click SUPPORT, choose Support center and there you will find the account number as : xxxxxxxxxxxx
 
 Step 4:
 
 - Go to the AWS CLI, Configure AWS using the script : aws configure 
 - Transfer bojects from the Source Bucket to Destination Bucket using the command as below:
 
- # aws s3 cp file.txt s3://sourcebucket s3://destinationbucket
+  aws s3 cp file.txt s3://sourcebucket s3://destinationbucket
  
-  # aws s3 sync s3://sourcebucket s3://destinationbucket
+   aws s3 sync s3://sourcebucket s3://destinationbucket
   
   - If the above command fails, then try this command instead
   
- # aws s3 sync s3://sourcebucket s3://destinationbucket --Source region REGION NAME --region REGION NAME 
+  aws s3 sync s3://sourcebucket s3://destinationbucket --Source region REGION NAME --region REGION NAME 
   
   
  # OUTPUT:
