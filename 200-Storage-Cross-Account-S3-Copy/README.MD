@@ -46,9 +46,6 @@ Your client has a team of developers using `Account A` to create assets to be us
  1. ## Verify S3 Copying & Ownership:
     - Go to the AWS CLI, Configure AWS using the script : `aws configure`. Transfer ojects from the Source Bucket to Destination Bucket using the command as below:
         ```sh
-        aws s3 cp file.txt s3://sourcebucket/obj.jpg s3://destinationbucket
-        # or
-        # Not recommended, But if you want to sync the buckets as a one time activity
         aws s3 sync s3://sourcebucket s3://destinationbucket
         ```
     - If the above command fails, then try this command instead
