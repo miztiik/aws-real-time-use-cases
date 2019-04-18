@@ -1,8 +1,9 @@
-# DynamoDB Database archival and empty table
+# DynamoDB Performance Improvement archival and empty table
 
 ## Scenario
-Testing is in progress and 50 lakh records have been pushed into one DynamoDB database. After this initial day load has completed regular testing needs to continue. This huge amount of data is causing delay in day to day scans and queries.
-Customer has asked us to archive the initial load of 50 lakh records and empty out the table. The archived data should be easily available to be inserted back into the table if required.
+During initial of the DynamoDB testing 500K items are being added the Table. During regular operations post the testing phase, application Read/Write latency post ingestion of 500K records increases significantly. 
+
+Your client requests you to archive the initial load test data of 500K Items and improve the table performance.  The archived data should be easily available to be inserted back into the table if & when required.
 
 
 ## Next Steps
