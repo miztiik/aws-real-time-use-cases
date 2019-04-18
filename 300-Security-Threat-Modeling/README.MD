@@ -21,7 +21,7 @@ It is imporment to identify Security and complience requrents and Business requr
 
 
 Sample Data flow diagram for web applications
-![]()
+![](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/300-Security-Threat-Modeling/Images/threatmodel3tierext.png)
 
 ### Inputs
 The following documents are needed as inputs to the threat modeling activity:
