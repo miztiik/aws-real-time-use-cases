@@ -1,7 +1,7 @@
 # DynamoDB Performance Improvement archival and empty table
 
 ## Scenario
-During initial of the DynamoDB testing 500K items are being added the Table. During regular operations post the testing phase, application Read/Write latency post ingestion of 500K records increases significantly. 
+During initial testing of the DynamoDB 500K items are being added into the table. Regular operations post the testing phase, application Read/Write latency post ingestion of 500K records increases significantly. 
 
 Your client requests you to archive the initial load test data of 500K Items and improve the table performance.  The archived data should be easily available to be inserted back into the table if & when required.
 
