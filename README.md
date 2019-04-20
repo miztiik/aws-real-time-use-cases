@@ -1,7 +1,7 @@
 # AWS Real Time Use Cases
 Repo containing quick starts for real time AWS use cases.
 
-![Miztiik AWS Real Time Use Cases](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/images/miztiik-aws-real-time-events-1.png)
+![Miztiik AWS Real Time Use Cases](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/images/miztiik-aws-real-time-use-cases.png)
 
 ## Who should use this repo
 1. If you have a scenario or an issue that you faced in your work and think it is interesting enough to share with the community. 
