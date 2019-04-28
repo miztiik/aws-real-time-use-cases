@@ -20,6 +20,7 @@ Your client requests you to archive the initial load test data of 500K Items and
       aws dynamodb restore-table-from-backup --target-table-name Restored-Practicetable --backup-arn "arn:aws:dynamodb:us-east-XXX/backup/000"
   
 2. For a long term solution, please refer to the following blog from AWS.
+   https://aws.amazon.com/blogs/database/automatically-archive-items-to-s3-using-dynamodb-time-to-live-with-aws-lambda-and-amazon-kinesis-firehose/
 
 
 ### Contact Us
