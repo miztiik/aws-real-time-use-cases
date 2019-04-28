@@ -24,7 +24,8 @@ As the operations are impacted, A quick fix was required to restore the reliabil
       - Restore with the following command,
 
         ```sh
-        aws dynamodb restore-table-from-backup --target-table-name {{YOUR-RESTORED-TABLE-NAME}} --backup-arn {{DD-TABLE-BACKUP-ARN}}
+        aws dynamodb restore-table-from-backup --target-table-name {{YOUR-RESTORED-TABLE-NAME}} \
+                                               --backup-arn {{DD-TABLE-BACKUP-ARN}}
         ```
   
 ## Strategic Solution
