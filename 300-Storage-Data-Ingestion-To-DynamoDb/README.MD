@@ -1,4 +1,4 @@
-# DynamoDB Performance Issue[s]
+# Data Ingestion To DynamoDB
 
 ## Scenario
 Your client requests you ingest a data dump of 125K records into a fresh DyanamoDB for testing purpose in mutliple environments. The fields in the data dump are separated by commas and there is no gurantee that all fields have values. Each of these records are of size ~3KB. Post data load your client is planning to perform tests on the system.
@@ -8,7 +8,7 @@ Can you provide a solution that can achieve this and can be replicated across en
 
 ## Solution - 1 
 We can use the Data pipeline AWS service to load the data into the DynamoDB table.
-1. ## Create a Data Pipeline 
+1. ### Create a Data Pipeline 
      Provide an appropriate Pipeline name and build the source from one of the templates provided. For this usecase we chose - "Export DynamoDb tables to S3". We opted for import a defination and loaded from the local file that was shared to us by customer.
 2. ### Choose a schedule 
      To run the pipeline daily or in a specific schedule choose the appropriate schedule. For this usecase we chose "Run on pipeline activation" ending after one occurance.
@@ -19,9 +19,12 @@ We can use the Data pipeline AWS service to load the data into the DynamoDB tabl
      - Any missing attribute or null values in data dump will cause the ingestion to fail.
 
 ## Solution - 2
-The team developed Java utilies to convert the  NULL values in the csv input file  into zeroes and loaded the data succesfully into DynamoDB table.
+To address the issue faced in approach 1, the team needed to handle the null or missing values in the csv file. Java utilies were developed to convert the  NULL values in the csv input file  into zeroes and loaded the data into DynamoDB table.
 
-This approach worked.
+This Solution 2 worked.
+
+## Solution - 3
+AWS Service Glue combines approach 1 and 2 and can be considered as a third approach to address this use-case.
 
 
 ### Contact Us
