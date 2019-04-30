@@ -15,6 +15,7 @@ You are getting an email from AWS about your AWS account billing is $XXXX(_You r
 2. What controls will you put in place to prevent such events?
    - Amazon GuardDuty is an intelligent threat detection service that provides continuous monitoring of your AWS accounts and    workloads to protect against malicious or unauthorized activities.
    -  we can help ensure full coverage while making it harder for a misconfiguration or an ingenious attacker to change that. When we detect something interesting, we generate a security finding and deliver it to you through the GuardDuty console and AWS CloudWatch Events. This makes it possible to simply view findings in GuardDuty or push them to an existing SIEM or workflow system. We’ve already seen customers take it a step further using AWS Lambda to automate actions such as changing security groups, isolating instances, or rotating credentials.
+   - we should enable CloudTrail logging so you are alerted whenever instances are spun up
    
  
   
