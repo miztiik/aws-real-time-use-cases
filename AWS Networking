@@ -1,0 +1,13 @@
+VPC Endpoints 
+
+---------------- 
+
+VPC endpoint allows you to access publically accessible aws resources from a private instance without an external gateway. 
+
+currently S3 and dynamodb are the only service allowed use with vpc endpoint. 
+
+A VPC endpoint for Amazon S3 enables AWS Glue to use private IP addresses to access Amazon S3 with no exposure to the public internet 
+
+AWS Glue does not require public IP addresses, n internet gateway, a NAT device, or a virtual private gateway in your VPC 
+
+use endpoint policies to control access to Amazon S3.  
