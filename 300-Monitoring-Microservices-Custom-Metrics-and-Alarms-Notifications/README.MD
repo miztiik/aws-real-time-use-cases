@@ -21,7 +21,7 @@ Your client runs their application as micro services. All the micro services are
 
 ### Contact Us
 
-You can reach out to us to get more details through [here](https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/about).
+You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
 ### Metadata
 
