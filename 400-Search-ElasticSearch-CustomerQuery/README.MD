@@ -2,9 +2,10 @@
 
 ## Scenario
 Your team is working on a legacy data migration project that has migrated data from DB2 to ElasticSearch using Streamsets. You have been told to use AWS managed ElasticSearch to store the migrated data. 
+
 Your customer is planning to introduce a new user interface for its end-users. This interface should allow the end-users to enter a valid search string, all transaction data in the ElasticSearch matching the search criteria should be returned back to the end-user.
 
-Your customer has asked you to create a search system that will take in minimal information as an input (one or more of the fields about the customer), and then will return a response with all matching records related to the entered search criteria.
+You have been asked by your customer to create a search system that will take in minimal information as an input (one or more of the fields about the customer), and then will return a response with all matching records related to the entered search criteria.
 
 
 ## Next Steps
