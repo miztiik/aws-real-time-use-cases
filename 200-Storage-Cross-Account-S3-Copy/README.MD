@@ -17,40 +17,80 @@ Your client has a team of developers using `Account A` to create assets to be us
 1. ## Step 2. Source Account S3bucket
     - Create a `sourcebucket` in a Region (eg.,Mumbai) ,in the `Account A`
     - Upload sample files onto this bucket, that will be transferred to destination account.
+    - Attachthe below mentioned permissions into the Bucket policy;
+    ```json
+    {
+    "Id": "Policy1541018284691",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1541018283275",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*",
+            "Condition": {
+                "StringEquals": {
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+            },
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+                ]
+            }
+        }
+    ]
+}
+```
 
 1. ## Destination Account S3bucket
 
     - Create a `destinationbucket` in Ireland Region,in the `Account B`
     - Attach the below mentioned permissions into the Bucket policy;
         ```json
+       {
+    "Version": "2008-10-17",
+    "Id": "Policy1357935677554",
+    "Statement": [
         {
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Sid": "ExamplePermissions",
-                    "Effect": "Allow",
-                    "Principal": {
-                        "AWS": "arn:aws:iam::Account_A:root"
-                    },
-                    "Action": "s3:*",
-                    "Resource": [
-                        "arn:aws:s3:::DESTINATION_BUCKET",
-                        "arn:aws:s3:::DESTINATION_BUCKET/*"
-                    ]
-                }
-            ]
+            "Sid": "Stmt1357935647218",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::DESTINATION BUCKET NAME"
+        },
+        {
+            "Sid": "Stmt1357935676138",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+            },
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::DESTINATION BUCKET NAME/*"
         }
+    ]
+}
         ```
     **Note:** _The Source account's ACCOUNT NUMBER can be figured by going to the SOURCE ACCOUNT's CONSOLE, then click SUPPORT, choose Support center and there you     will find the account number as : `xxxxxxxxxxxx`_
 
  1. ## Verify S3 Copying & Ownership:
     - Go to the AWS CLI, Configure AWS using the script : `aws configure`. Transfer ojects from the Source Bucket to Destination Bucket using the command as below:
         ```sh
-        aws s3 sync s3://sourcebucket s3://destinationbucket
+        aws s3api put-object-acl --bucket DestinationBucket --key ObjectName --acl bucket-owner-full-control
         ```
-    - If the above command fails, then try this command instead
+        The above command will provide full control of the object to the bucket owner (Destination bucket owner).
+        
+    - If you want to copy multiple objects to the bucket, then try this command instead
     
         ```sh
-        aws s3 sync s3://sourcebucket s3://destinationbucket --Source region REGION NAME --region REGION NAME
+       aws s3 cp s3://SOURCE BUCKET NAME/ s3://DESTINATION BUCKET NAME/ --acl bucket-owner-full-control --recursive
         ```
-    - The above CLI scripts will transfer the S3 objects accross AWS accounts, also ending up in transferring the `OWNERSHIP` to the destination account.
+    - The above CLI scripts will copy all the S3 objects accross AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
+    
+    1. ## Learn more about the S3 Cross account access and AWS CLI commands with the link below;
+    
+     [I'm an inline-style link](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
