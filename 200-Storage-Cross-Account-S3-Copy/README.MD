@@ -43,6 +43,7 @@ Your client has a team of developers using `Account A` to create assets to be us
         }
     ]
 }
+
 ```
 
 1. ## Destination Account S3bucket
@@ -74,7 +75,10 @@ Your client has a team of developers using `Account A` to create assets to be us
         }
     ]
 }
-        ```
+
+ ```
+ 
+ 
     **Note:** _The Source account's ACCOUNT NUMBER can be figured by going to the SOURCE ACCOUNT's CONSOLE, then click SUPPORT, choose Support center and there you     will find the account number as : `xxxxxxxxxxxx`_
 
  1. ## Verify S3 Copying & Ownership:
