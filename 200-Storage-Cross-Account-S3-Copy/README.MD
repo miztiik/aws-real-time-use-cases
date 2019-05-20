@@ -23,7 +23,7 @@ into the destination bucket of `Account B`.These permissions will transfer the o
         - Upload sample files onto this bucket, that will be transferred to destination account.
         - Attach the below mentioned permissions into the Bucket policy;
     
-    ```json
+   ```json
     {
     "Id": "Policy1541018284691",
     "Version": "2012-10-17",
@@ -34,7 +34,7 @@ into the destination bucket of `Account B`.These permissions will transfer the o
                 "s3:PutObject"
             ],
             "Effect": "Allow",
-            "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*",
+            "Resource": "arn:aws:s3:::<<YOUR-BUCKET-NAME>>/*",
             "Condition": {
                 "StringEquals": {
                     "s3:x-amz-acl": "bucket-owner-full-control"
@@ -42,13 +42,13 @@ into the destination bucket of `Account B`.These permissions will transfer the o
             },
             "Principal": {
                 "AWS": [
-                    "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+                    "arn:aws:iam::<<YOUR-DEV-ACCOUNT-NUMBER>>:user/<<iam-username>>"
                 ]
             }
         }
     ]
-}
-`
+    }}
+
 
 3. ## Destination Account S3bucket
 
@@ -64,24 +64,23 @@ into the destination bucket of `Account B`.These permissions will transfer the o
             "Sid": "Stmt1357935647218",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+                "AWS": "arn:aws:iam::<<YOUR-DEV-ACCOUNT-NUMBER>>:user/<<iam-username>>"
             },
             "Action": "s3:ListBucket",
-            "Resource": "arn:aws:s3:::DESTINATION BUCKET NAME"
+            "Resource": "arn:aws:s3:::<<DESTINATION BUCKET NAME>>"
         },
         {
             "Sid": "Stmt1357935676138",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::YOUR-DEV-ACCOUNT-NUMBER:user/iam-username"
+                "AWS": "arn:aws:iam::<<YOUR-DEV-ACCOUNT-NUMBER>>:user/<<iam-username>>"
             },
             "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::DESTINATION BUCKET NAME/*"
+            "Resource": "arn:aws:s3:::<<DESTINATION BUCKET NAME>>/*"
         }
     ]
-}
-   `
-  
+    }
+     ```
     
         
    **Note:** _The Source account's ACCOUNT NUMBER can be figured by going to the SOURCE ACCOUNT's CONSOLE, 
@@ -90,20 +89,24 @@ into the destination bucket of `Account B`.These permissions will transfer the o
     
 
   4. ## Verify S3 Copying & Ownership:
-                       - Go to the AWS CLI, Configure AWS using the script : `aws configure`. 
-                          -Transfer ojects from the Source Bucket to Destination Bucket using the command as below:
+                
+      -  Go to the AWS CLI, Configure AWS using the script : `aws configure`. 
+      Transfer ojects from the Source Bucket to Destination Bucket using the command as below:
+        
         ```sh
         aws s3api put-object-acl --bucket DestinationBucket --key ObjectName --acl bucket-owner-full-control
         ```
-        The above command will provide full control of the object to the bucket owner (Destination bucket owner).
-        
-       - If you want to copy multiple objects to the bucket, then try this command instead
+        -The above command will provide full control of the object to the bucket owner (Destination bucket owner).
+          
+        -If you want to copy multiple objects to the bucket, then try this command instead
     
         ```sh
-       aws s3 cp s3://SOURCE BUCKET NAME/ s3://DESTINATION BUCKET NAME/ --acl bucket-owner-full-control --recursive
+       aws s3 cp s3://SOURCE BUCKET NAME/ {{s3://DESTINATION BUCKET NAME/}}\
+       --acl bucket-owner-full-control --recursive
         ```
-       - The above CLI scripts will copy all the S3 objects accross AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
+        
+       -The above CLI scripts will copy all the S3 objects accross AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
     
-     ## Learn more about the S3 Cross account access and AWS CLI commands using the link below;
+     ### References
     
-     [https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/]
+     1.Read more about granting S3object access during the COPY or PUT operation here[S3 Bucket Onwer acess](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
