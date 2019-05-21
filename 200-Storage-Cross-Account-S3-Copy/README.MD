@@ -4,9 +4,10 @@
 Your client has a team of developers using `Account A` to create assets to be used in the production site hosted in `Account B`. As the cloud engineer your client expects you to set up automated copy of S3 Objects from `Account A` to S3 bucket in `Account B` and ensure that `Acccount B` can modify/change the permissions of the objects to suit their deployment requirements.
 
 ## Introduction
-To achieve the S3 Cross account object transfer from one account to another,it is important to set up the bucket permissions in both
-`Account A` and `Account B` S3 buckets respectively.The bucket permissions will allow any IAM users of `Account A` to upload objects 
-into the destination bucket of `Account B`.These permissions will transfer the ownership from `A` to `B` successfully. Finally,the ACL has to be applied through CLI to provide `FULL CONTROL` of the objects to the Destination bucket.Now,the Destination bucket users will have access to the transferred objects and also the full controll and Ownership.
+- Create SourceBucket in `Account A` for developers and DestinationBucket in  `Account B` for Production. 
+- Set up the bucket permissions in both`Source Bucket` and `Destination Bucket`
+- The bucket permissions will allow any IAM users of `Account A` to upload objects into the `DestinationBucket`,along with `OWNERSHIP` transfer. 
+- Finally,apply ACL through CLI scripts to provide `FULL CONTROL` of the objects to the Destination bucket.
 
 0. ## Prerequisites
     - Two AWS Accounts 
@@ -18,7 +19,7 @@ into the destination bucket of `Account B`.These permissions will transfer the o
 1. ## Setup Tools 
     Let’s prepare the two accounts. Ensure you have two buckets `sourcebucket` and `destinationbucket`. _Change to your bucket names_. Install and configure AWS CLI with two different profiles for Account `A` & `B`.
 
-2. ## Source Account S3bucket
+2. ## Source Account Bucket
      - Create a `sourcebucket` in a Region (eg.,Mumbai) ,in the `Account A`.
         - Upload sample files onto this bucket, that will be transferred to destination account.
         - Attach the below mentioned permissions into the Bucket policy;
@@ -47,10 +48,10 @@ into the destination bucket of `Account B`.These permissions will transfer the o
             }
         }
     ]
-    }}
+    }
 
 
-3. ## Destination Account S3bucket
+3. ## Destination Account Bucket
 
     - Create a `destinationbucket` in Ireland Region,in the `Account B`.
     -  Attach the below mentioned permissions into the Bucket policy;
@@ -91,22 +92,26 @@ into the destination bucket of `Account B`.These permissions will transfer the o
   4. ## Verify S3 Copying & Ownership:
                 
       -  Go to the AWS CLI, Configure AWS using the script : `aws configure`. 
-      Transfer ojects from the Source Bucket to Destination Bucket using the command as below:
-        
+      - Transfer objects from the Source Bucket to Destination Bucket using the command as below:
+      
+      ```sh
+         aws s3api put-object-acl  --bucket {{Your-DestinationBucket-Name}} \
+                                   --key {{Your-ObjectName}} \
+                                   --acl {{bucket-owner-full-control}}              
+       ```
+     
+        - The above command will provide full control of the object to the bucket owner (Destination bucket owner).
+       
+         - If you want to copy multiple objects to the bucket, then try this command instead
         ```sh
-        aws s3api put-object-acl --bucket DestinationBucket --key ObjectName --acl bucket-owner-full-control
-        ```
-        -The above command will provide full control of the object to the bucket owner (Destination bucket owner).
-          
-        -If you want to copy multiple objects to the bucket, then try this command instead
-    
-        ```sh
-       aws s3 cp s3://SOURCE BUCKET NAME/ {{s3://DESTINATION BUCKET NAME/}}\
-       --acl bucket-owner-full-control --recursive
+            aws s3 cp s3://{{YOUR-SOURCE BUCKET NAME}}/  \
+                      s3://{{YOUR-DESTINATION BUCKET NAME}}/  \
+                      --acl {{bucket-owner-full-control}} \
+                      --recursive
         ```
         
-       -The above CLI scripts will copy all the S3 objects accross AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
+       - The above CLI scripts will copy all the S3 objects across AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
     
-     ### References
+     #### References
     
-     1.Read more about granting S3object access during the COPY or PUT operation here[S3 Bucket Onwer acess](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
+     1.[S3 Cross Account Object Copying & Ownership Transfer](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
