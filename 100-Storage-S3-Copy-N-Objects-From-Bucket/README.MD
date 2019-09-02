@@ -12,13 +12,7 @@ Your client has 2000+ objects in a certain S3 bucket and want to copy them over 
 ### Metadata*
 
 **Level**: 100
-_The complexity of the problem ranging from 100 to 400, 100 being the lowest._
-
-##### References
-1. [Add your citations & reference URLs here](https://www.youtube.com/c/ValaxyTechnologies)
 
 ### Contact Us*
 
 You can reach out to us to get more details through [here](https://www.youtube.com/c/ValaxyTechnologies/about).
-
-**P.S**: All sections having Asterisk(*) are mandatory
