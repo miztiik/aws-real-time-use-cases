@@ -9,9 +9,9 @@ They want you to propose a solution that will  deallocate licenses from the mach
 
 ## Next Steps
 
-1. What actions will you take ?
-1. How will you make it re-usable
+1. What actions will you take?
 1. How will you test your solution?
+1. Can you automate its deployment and improve its re-usability as a bonus feature?
 
 ### Metadata
 
