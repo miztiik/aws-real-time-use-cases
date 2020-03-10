@@ -40,3 +40,11 @@ The following documents are needed as inputs to the threat modeling activity:
 - Data Flow Diagrams (DFDs) describing the components/subsystems of the product's architecture
 - Threat Modeling Report
 - Prioritized design flaws and mitigations
+
+## 👋 Buy me a coffee
+
+Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+### ℹ️ Metadata
+
+**Level**: 300

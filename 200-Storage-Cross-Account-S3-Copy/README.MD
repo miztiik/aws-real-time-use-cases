@@ -1,6 +1,6 @@
 # Transfer ownership of Amazon S3 objects to a different AWS account
 
-## Scenario
+## ?? Scenario
 
 Your client has a team of developers using `Account A` to create assets to be used in the production site hosted in `Account B`. As the cloud engineer your client expects you to set up automated copy of S3 Objects from `Account A` to S3 bucket in `Account B` and ensure that `Acccount B` can modify/change the permissions of the objects to suit their deployment requirements.
 
@@ -13,7 +13,7 @@ Your client has a team of developers using `Account A` to create assets to be us
 - The bucket permissions will allow any IAM users of `Account A` to upload objects into the `DestinationBucket`,along with `OWNERSHIP` transfer.
 - Finally,the ACL has to be applied through CLI to provide `FULL CONTROL` of the objects to `Account B`.
 
-0. ## Prerequisites
+1. ## Prerequisites
 
     - Two AWS Accounts
         - Source account:`Account A`
@@ -121,11 +121,15 @@ Your client has a team of developers using `Account A` to create assets to be us
 
 You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
-#### References
+#### ?? References
 
 1. [Granting Cross Account Permissions](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-8)
 1. [S3 Cross Account Object Copying & Ownership Transfer](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
 
-### Metadata
+## ?? Buy me a coffee
+
+Buy me a coffee ? through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+### ?? Metadata
 
 **Level**: 200

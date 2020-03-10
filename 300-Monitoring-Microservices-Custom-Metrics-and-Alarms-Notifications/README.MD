@@ -20,10 +20,10 @@ Your client runs their application as micro services. All the micro services are
 
 1. Create a cloudformation script for SNS Topic and SNS Subscriptions mentioning protocol as email and endpoint as the email id in which the notifications need to be sent.
 
-### Contact Us
+## 👋 Buy me a coffee
 
-You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
-### Metadata
+### ℹ️ Metadata
 
 **Level**: 300

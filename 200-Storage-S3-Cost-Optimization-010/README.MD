@@ -1,17 +1,21 @@
 # S3 Cost Optimization
 
-## Scenario
+## 🔥 Scenario
 
 Your client uses s3 extensively to store data. Some of the buckets hold close to 5TB of data. Your client has already configured S3 Lifecycle Policies to move data to glacier to save on costs. But they are still facing a huge bill and it is growing all the time. They have contacted to suggest them ways to reduce their S3 bill.
 
 ![S3 Cost Optimization](images/miztiik-aws-real-time-use-cases-s3-cost-optimizations.png)
 
-## Next Steps
+## 📋 Next Steps
 
 1. What actions will you take to ?
 1. What order will you take those actions?
 1. What controls will you put in place to prevent such events?
 
-### Contact Us
+## 👋 Buy me a coffee
 
-You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+### ℹ️ Metadata
+
+**Level**: 200

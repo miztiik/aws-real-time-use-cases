@@ -2,9 +2,9 @@
 
 Your APIs are publicly accessible. What is the best way to secure the API Gateway. In addition to securing access to the API GW, how can you to throttle high volume requests.
 
-![](https://cdn-images-1.medium.com/max/2400/0*vXjRjS4vzOV9TFBh.)
+![How to secure API Gateway](https://cdn-images-1.medium.com/max/2400/0*vXjRjS4vzOV9TFBh.)
 
-### Steps for Secure Control access to your API
+## Steps for Secure Control access to your API
 
 1. Use Resource Policy to an API to restrict access to a specific Amazon VPC or VPC endpoint.
 1. By useing Cross-origin resource sharing (CORS) lets you to control how your REST API responds to cross-domain resource requests.
@@ -16,4 +16,11 @@ Your APIs are publicly accessible. What is the best way to secure the API Gatewa
    - For example, API owners can set a rate limit of 1,000 requests per second for a specific method in their REST APIs, and also configure Amazon API Gateway to handle a burst of 2,000 requests per second for a few seconds
 1. Use `Usage Plans` to provide API keys to your customers and then set throttling limits for individual API keys.
     - Throttling ensures that API traffic is controlled to help your backend services maintain performance and availability.
-  
+
+## 👋 Buy me a coffee
+
+Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+### ℹ️ Metadata
+
+**Level**: 300
