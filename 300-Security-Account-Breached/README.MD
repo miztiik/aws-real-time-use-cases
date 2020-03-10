@@ -17,5 +17,18 @@ You are getting an email from AWS about your AWS account billing is $XXXX(_You r
    -  we can help ensure full coverage while making it harder for a misconfiguration or an ingenious attacker to change that. When we detect something interesting, we generate a security finding and deliver it to you through the GuardDuty console and AWS CloudWatch Events. This makes it possible to simply view findings in GuardDuty or push them to an existing SIEM or workflow system. We’ve already seen customers take it a step further using AWS Lambda to automate actions such as changing security groups, isolating instances, or rotating credentials.
    - we should enable CloudTrail logging so you are alerted whenever instances are spun up
    
- 
-  
+ ## AWS Rotate IAM Keys
+    
+  3. How about access keys for other IAM Users.?
+      AWS Rotate IAM Keys can rotate keys for multiple profiles, but it can also replace multiple profiles with the same keys.
+      ###AWS Rotate IAM Keys (https://aws-rotate-iam-keys.com/)
+       <pre> 
+        wget -q https://github.com/rhyeal/aws-rotate-iam-keys/blob/master/aws-rotate-iam-keys_0.9.1.deb -o aws-rotate-iam-keys.deb
+        sudo dpkg -i aws-rotate-iam-keys.deb
+        sudo apt-get install -f
+        rm aws-rotate-iam-keys.deb # optional file clean up
+        <pre>
+        
+  ## To rotate a specific profile in your ~/.aws/credentials file:
+    
+      aws-rotate-iam-keys --profile myProfile
