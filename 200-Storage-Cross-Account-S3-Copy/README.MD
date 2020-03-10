@@ -1,4 +1,4 @@
-# Transfer ownership of Amazon S3 objects to a different AWS account.
+# Transfer ownership of Amazon S3 objects to a different AWS account
 
 ## Scenario
 
@@ -8,14 +8,14 @@ Your client has a team of developers using `Account A` to create assets to be us
 
 ## Introduction
 
-- Create SourceBucket in `Account A` for developers and DestinationBucket in  `Account B` for Production. 
+- Create SourceBucket in `Account A` for developers and DestinationBucket in  `Account B` for Production.
 - Set up the bucket permissions in both`Source Bucket` and `Destination Bucket`
-- The bucket permissions will allow any IAM users of `Account A` to upload objects into the `DestinationBucket`,along with `OWNERSHIP` transfer. 
+- The bucket permissions will allow any IAM users of `Account A` to upload objects into the `DestinationBucket`,along with `OWNERSHIP` transfer.
 - Finally,the ACL has to be applied through CLI to provide `FULL CONTROL` of the objects to `Account B`.
 
 0. ## Prerequisites
 
-    - Two AWS Accounts 
+    - Two AWS Accounts
         - Source account:`Account A`
         - Destination Account:`Account B`
     - S3 Buckets in Account `A` & `B`
@@ -90,18 +90,18 @@ Your client has a team of developers using `Account A` to create assets to be us
         }
         ```
 
-   **Note:** _The account numbers can be figured by going to the account's CONSOLE, 
+   **Note:** _The account numbers can be figured by going to the account's CONSOLE,
    then click SUPPORT, choose Support center and there you will find the account number as : `xxxxxxxxxxxx`_.
 
-1. ## Verify S3 Copying & Ownership:
+1. ## Verify S3 Copying & Ownership
 
-    -  Go to the AWS CLI, Configure AWS using the script : `aws configure`. 
+    - Go to the AWS CLI, Configure AWS using the script : `aws configure`.
     - Transfer objects from the Source Bucket to Destination Bucket using the command as below:
 
       ```bash
       aws s3api put-object-acl --bucket {{YOUR-DESINTATION-BUCKET-NAME}} \
                                --key {{YOUR-OBJECT-NAME}} \
-                               --acl bucket-owner-full-control              
+                               --acl bucket-owner-full-control
       ```
 
       - The above command will provide full control of the object to the bucket owner (Destination bucket owner).

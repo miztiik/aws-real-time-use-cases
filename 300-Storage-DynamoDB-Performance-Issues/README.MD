@@ -1,14 +1,17 @@
 # DynamoDB Performance Issue[s]
 
 ## Scenario
+
 Your client's informs they have performance issues in their Dynamodb. During initial testing of the DynamoDB 500K items are being added into the table. Application teams are complaining that the platform had slowed down considerably. Upon investigation you find that the Read/Write latency post ingestion of 500K records increased significantly and is impacting operations.
 
 Your client wants you to improve the DDB performance urgently and requests you to archive the initial load test data of 500K Items. The archived data should be easily available to be inserted back into the table if & when required.
 
-
 ## Tactical Solution[s]
+
 As the operations are impacted, A quick fix was required to restore the reliability of the system.
+
 1. ### Backup DDB Table
+
       - Take a backup of the DynamoDB table.
 
         ```sh
@@ -16,10 +19,13 @@ As the operations are impacted, A quick fix was required to restore the reliabil
                                    --backup-name {{YOUR-BACKUP-NAME}} \
                                    --region {{YOUR-AWS-REGION}}
         ```
-	  Make a note of the `DDB Table Backup ARN` to be used in the restore operation.  
+
+   Make a note of the `DDB Table Backup ARN` to be used in the restore operation.  
 
       - Delete the cloudformation stack that created the table, _If table created manually delete the table through console or CLI_
+
 1. ### Create & Restore DDB Table
+
       - Recreate a new table with the same name. _Preferably through  Cloudformation_.
       - Restore with the following command,
 
@@ -29,12 +35,13 @@ As the operations are impacted, A quick fix was required to restore the reliabil
         ```
   
 ## Strategic Solution
+
 For a long term solution, You can use [DynamoDB TTL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) that removes older items from a DynamoDB table. If you want to archive them to S3, you use Lambda funtion in conjuntion with DynamoDB Streams<sup>[Ref](#References)</sup>.
 
-
 ### Contact Us
+
 You can reach out to us to get more details through [here](https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/about).
 
-
 ##### References
+
 1. [Automatically Archive Items with TTL](https://aws.amazon.com/blogs/database/automatically-archive-items-to-s3-using-dynamodb-time-to-live-with-aws-lambda-and-amazon-kinesis-firehose/)

@@ -18,7 +18,10 @@ Your client plans to use chat bot to provide a 24x7 digital experience to his cu
 1. What order will you take those actions?
 1. What controls will you put in place to prevent such events?
 
+## 👋 Buy me a coffee
 
-### Contact Us
+Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
-You can reach out to us to get more details through [here](https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/about).
+### ℹ️ Metadata
+
+**Level**: 400
