@@ -1,0 +1,9 @@
+{
+  "customisations": "scruffy;dir:LR",
+  "type": "class",
+  "dsl": ", [❝User❞{bg:orange}]🔥-.->[Trigger | Stack Cfn  Deletion{bg:wheat}], , [Trigger | Stack Cfn Deletion]🔥-.-> [Stack Deleted{bg:red}]",
+  "digest": "d58064e3",
+  "file_only": false,
+  "mime": "image/svg+xml",
+  "extension": "svg"
+}
