@@ -8,7 +8,7 @@ One of your mission critical stack is deleted accidentally. Your client is expec
 
 What is your recommendation?
 
-## 💭 Solutions
+## 🎯 Solutions
 
 Unfortunately it is not possible to restore the deleted stack, Instead you can recreate the resources in the stack with the same template and copy the data from backups. To avoid or mitigate the impact of accidental deletion you can use the following options,
 
