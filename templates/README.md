@@ -31,4 +31,4 @@ Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can rea
 **Level**: 300
 
 [1]: ../300-cloudFormation-drift-detection/README.md
-[2]: ../300-management-stack-deletion/README.md
+[2]: https://github.com/miztiik/aws-real-time-use-cases/tree/master/300-Management-Stack-Deletion
