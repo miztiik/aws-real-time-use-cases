@@ -18,8 +18,9 @@ Go ahead and raise a pull request. All we require a short brief description of y
   A very broad guidance on the `difficulty level` on the topics. These are not written on stone, more like lines on shifting sands, can be very subjective depending upon the audience and the ecosystem.
 
 - `100`: Introductory and overview.
+
 - `200`: Intermediate level, requires specific details about the topic.
 - `300`: Advanced level, requires in-depth understanding of features.
-- `400`: Expert level; requires expert-to-expert interaction & coverage of specialized deep-dives into specific topics.
+- `400`: Expert level requires expert-to-expert interaction & coverage of specialized deep-dives into specific topics.
 - `500`: Thought Leadership
 - Anything more than should be _Zen Mode_ or _God Mode_ what do you say?
