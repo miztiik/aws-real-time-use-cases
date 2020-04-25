@@ -2,7 +2,7 @@
 
 ## 🔥 Scenario
 
-Describe the problem that needs to be resolved in a crisp manner, yet with enough information to solve it.
+Your customer is a big enterprise and looking to consolidate their multiple AWS accounts. They are also looking for a seamless way to centralize the management of security and auditing of controls in all their accounts.
 
 ## 🎯Solutions
 
