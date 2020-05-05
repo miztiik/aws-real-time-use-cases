@@ -5,7 +5,7 @@
 Your customer has the following setup,
 > Microservice Application logs -> CloudWatch Logs -> Subscription with filter -> Kinesis Firehose -> Transformation Lambda -> S3
 
-![miztiik_lambda_request_response_payload_errors](images/miztiik_lambda_request_response_payload_errors.png)
+![miztiik_lambda_request_response_payload_errors](images/miztiik_lambda_request_response_payload_errors_02.png)
 
 You customer is reporting they are getting errors. Upon looking into the lamdba logs, they are seeing this entry
 
