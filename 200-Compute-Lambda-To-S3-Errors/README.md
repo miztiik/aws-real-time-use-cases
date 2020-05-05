@@ -17,20 +17,40 @@ They have tried to lower the buffer for the lambda in the Firehose stream config
 
 What are their options to fix this issue ?
 
-## 📋 Next Steps
-
-1. What actions will you take?
-1. How will you test your solution?
-1. Can you automate its deployment and improve its re-usability as a bonus feature?
-
 ## 🎯Solutions
 
 - Check the Lambda [docs][1] for the limits
 - Check if they can split the response payload before storing in S3
 
+### 🧪Sample Testing - (WIP)
+
+  Using a Flask route like this:
+
+```py
+@app.route('/giant')
+def giant():
+    payload = "x" * int(request.args.get('size', 1024 * 1024 * 6))
+    return payload
+```
+
+Now use `curl`, to generate a big response payload,
+
+```bash
+$ curl -s 'https://YOUR-END-POINT/mystique/giant?size=4718559' | wc -c
+ 4718559
+$ curl -s 'https://YOUR-END-POINT/mystique/giant?size=4718560'
+{"message": "Internal server error"}
+```
+
+Checking the logs, for error messages
+
 ## 👋 Buy me a coffee
 
 Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+### 📚 References
+
+1. [Blog: Lambda Payload Limit](https://dev.to/theburningmonk/hit-the-6mb-lambda-payload-limit-here-s-what-you-can-do-2ea2)
 
 ### ℹ️ Metadata
 
