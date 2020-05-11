@@ -21,6 +21,6 @@ Your APIs are publicly accessible. What is the best way to secure the API Gatewa
 
 Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
-### ℹ️ Metadata
+### 🏷️ Metadata
 
 **Level**: 300
