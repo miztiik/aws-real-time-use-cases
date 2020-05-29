@@ -6,19 +6,34 @@ Your client is building a SaaS platform and want their customers access to the l
 
 What is your recommendation solution for hosting multi-tenants in AWS ElasticSearch?
 
-## 👋 Buy me a coffee
-
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
-
 ### 📚 References
 
-1. [Elasticsearch multi tenant](https://www.reddit.com/r/aws/comments/85b5e7/elasticsearch_multi_tenant/)
+1. [Elasticsearch multi tenant][1]
+1. [Fine-Grained Access Control in Amazon ES][2]
+1. [Prevent Updates to Stack Resources][3]
+1. [Improve indexing performance][4]
+1. [Add Storage to AWS ES][5]
 
-1. [Fine-Grained Access Control in Amazon ES](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html)
-1. [Prevent Updates to Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)
-1. [Improve indexing performance](https://aws.amazon.com/premiumsupport/knowledge-center/elasticsearch-indexing-performance/)
-1. [Add Storage to AWS ES](https://aws.amazon.com/premiumsupport/knowledge-center/add-storage-elasticsearch/)
+### 💡 Help/Suggestions or 🐛 Bugs
 
-### ℹ️ Metadata
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
 
 **Level**: 300
+
+[1]: <https://www.reddit.com/r/aws/comments/85b5e7/elasticsearch_multi_tenant/>
+[2]: https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html
+[3]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html
+[4]: https://aws.amazon.com/premiumsupport/knowledge-center/elasticsearch-indexing-performance/
+[5]: https://aws.amazon.com/premiumsupport/knowledge-center/add-storage-elasticsearch/
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

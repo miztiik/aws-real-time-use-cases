@@ -117,19 +117,24 @@ Your client has a team of developers using `Account A` to create assets to be us
 
      - The above CLI scripts will copy all the S3 objects across AWS accounts, also ending up in transferring the `FULL CONTROLL` to the destination account.
 
-### Contact Us
+### ?? Help/Suggestions or ?? Bugs
 
-You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
 
-#### ?? References
+### References
 
-1. [Granting Cross Account Permissions](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-8)
-1. [S3 Cross Account Object Copying & Ownership Transfer](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/)
+1. [Granting Cross Account Permissions][1]
+1. [S3 Cross Account Object Copying & Ownership Transfer][2]
 
-## ?? Buy me a coffee
-
-Buy me a coffee ? through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
-
-### ?? Metadata
+### ??? Metadata
 
 **Level**: 200
+
+[1]: https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-8
+[2]: https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

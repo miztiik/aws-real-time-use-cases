@@ -33,6 +33,20 @@ To overcome the inconsisent data in the records, write a wrapper utility that wi
 
 AWS Service Glue combines approach 1 and 2 and can be considered as a third approach to address this use-case.
 
-### Contact Us
+### 💡 Help/Suggestions or 🐛 Bugs
 
-You can reach out to us to get more details through [here](https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
+
+**Level**: 300
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

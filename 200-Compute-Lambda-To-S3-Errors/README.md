@@ -44,16 +44,27 @@ $ curl -s 'https://YOUR-END-POINT/mystique/giant?size=4718560'
 
 Checking the logs, for error messages
 
-## 👋 Buy me a coffee
-
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
-
 ### 📚 References
 
-1. [Blog: Lambda Payload Limit](https://dev.to/theburningmonk/hit-the-6mb-lambda-payload-limit-here-s-what-you-can-do-2ea2)
+1. [Blog: Lambda Payload Limit][2]
 
-### ℹ️ Metadata
+### 💡 Help/Suggestions or 🐛 Bugs
+
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
 
 **Level**: 200
 
 [1]: https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html
+[2]: https://dev.to/theburningmonk/hit-the-6mb-lambda-payload-limit-here-s-what-you-can-do-2ea2
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

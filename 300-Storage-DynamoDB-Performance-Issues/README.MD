@@ -36,12 +36,28 @@ As the operations are impacted, A quick fix was required to restore the reliabil
   
 ## Strategic Solution
 
-For a long term solution, You can use [DynamoDB TTL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) that removes older items from a DynamoDB table. If you want to archive them to S3, you use Lambda funtion in conjuntion with DynamoDB Streams<sup>[Ref](#References)</sup>.
+For a long term solution, You can use [DynamoDB TTL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) that removes older items from a DynamoDB table. If you want to archive them to S3, you use Lambda function in conjunction with DynamoDB Streams<sup>[Ref](#References)</sup>.
 
-### Contact Us
+### References
 
-You can reach out to us to get more details through [here](https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/about).
+1. [Automatically Archive Items with TTL][1]
 
-##### References
+### 💡 Help/Suggestions or 🐛 Bugs
 
-1. [Automatically Archive Items with TTL](https://aws.amazon.com/blogs/database/automatically-archive-items-to-s3-using-dynamodb-time-to-live-with-aws-lambda-and-amazon-kinesis-firehose/)
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
+
+**Level**: 300
+
+[1]: https://aws.amazon.com/blogs/database/automatically-archive-items-to-s3-using-dynamodb-time-to-live-with-aws-lambda-and-amazon-kinesis-firehose/
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

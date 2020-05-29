@@ -17,14 +17,24 @@ A well-architected multi-account strategy helps you innovate faster in AWS, whil
 1. Provisioning Control Tower<sup>[2]</sup>
 1. Best Practices for Organisations<sup>[3]</sup>
 
-## 👋 Buy me a coffee
+### 💡 Help/Suggestions or 🐛 Bugs
 
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
 
-### ℹ️ Metadata
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
 
 **Level**: 300
 
 [1]: https://d0.awsstatic.com/aws-answers/AWS_Multi_Account_Security_Strategy.pdf
 [2]: https://aws.amazon.com/blogs/mt/enabling-self-service-provisioning-of-aws-resources-with-aws-control-tower
 [3]: https://aws.amazon.com/organizations/getting-started/best-practices
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

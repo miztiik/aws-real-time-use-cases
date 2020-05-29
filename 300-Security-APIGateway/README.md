@@ -17,10 +17,20 @@ Your APIs are publicly accessible. What is the best way to secure the API Gatewa
 1. Use `Usage Plans` to provide API keys to your customers and then set throttling limits for individual API keys.
     - Throttling ensures that API traffic is controlled to help your backend services maintain performance and availability.
 
-## 👋 Buy me a coffee
+### 💡 Help/Suggestions or 🐛 Bugs
 
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
 
 ### 🏷️ Metadata
 
 **Level**: 300
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

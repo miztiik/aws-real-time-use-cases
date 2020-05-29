@@ -10,14 +10,24 @@ The Application Load Balancers have [hard limits][1] on HTTP headers that cannot
 
 ### Test the solution
 
-Use curl to generate a paylod and sent to loadbalancer and enable logs to capture the errors at both side.
+Use curl to generate a payload and sent to load-balancer and enable logs to capture the errors at both side.
 
-## 👋 Buy me a coffee
+### 💡 Help/Suggestions or 🐛 Bugs
 
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
 
 ### 🏷️ Metadata
 
-**Level**: 100
+**Level**: 300
 
 [1]: https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#http-header-limits
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

@@ -2,7 +2,7 @@
 
 What are the steps to flow to secure IAM According to Security Team.
 
-## Importent Steps to Follow
+## Important Steps to Follow
 
 1. Ensure that use email address as IAM User
 1. Make sure NO Access key will be created for individual IAM User. You can use Service Account instead.
@@ -11,12 +11,22 @@ What are the steps to flow to secure IAM According to Security Team.
 1. User needs to change password during first time login to the aws console.
 1. Ensure that Unused AWS Accounts need to be deleted.
 1. Ensure that MFA (Multi Factor Authentication) need to be enable.
-1. Ensure that IAM User access key shoud be Rotate every 90 days.
+1. Ensure that IAM User access key should be Rotate every 90 days.
 
-## 👋 Buy me a coffee
+### 💡 Help/Suggestions or 🐛 Bugs
 
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
 
-### ℹ️ Metadata
+### 👋 Buy me a coffee
+
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
 
 **Level**: 300
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik

@@ -16,12 +16,21 @@ You clients wants you to increase the session duration. Can you help them with t
 
 Does this [article][1] help.
 
-## 👋 Buy me a coffee
+### 💡 Help/Suggestions or 🐛 Bugs
 
-Buy me a coffee ☕ through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
 
-### ℹ️ Metadata
+### 👋 Buy me a coffee
 
-**Level**: 300
+Buy me a [coffee ☕][900].
+
+### 🏷️ Metadata
+
+**Level**: 100
 
 [1]: https://aws.amazon.com/about-aws/whats-new/2018/03/longer-role-sessions
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[200]: https://github.com/miztiik/aws-real-time-use-cases/issues
+
+[900]: https://ko-fi.com/miztiik
