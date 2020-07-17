@@ -18,7 +18,7 @@ We can leverage [AWS Well Architected: Security Pillar][2] and its seven pillars
 - Keep people away from data
 - Prepare for security events
 
-We can apply these principles to the lifecycle of the container - Image Build, Container runtime, Image retirment. In addition to that, these talks [Best practices for CI/CD using AWS Fargate and Amazon ECS][30], [AWS Container Security 101][31] and [this][32] and [this][33] details some of the points hightlighted below.
+We can apply these principles to the lifecycle of the container - Image Build, Container runtime, Image retirment. In addition to that, these talks [Best practices for CI/CD using AWS Fargate and Amazon ECS][30], [AWS Container Security 101][31] and [this][32] and [this][33] details some of the points highlighted below.
 
 ### Building Docker Images - Best Practices
 
@@ -50,8 +50,8 @@ Build security into the entire CI/CD process including runtime
 - Use latest versions
   - Docker CVE Database
   - Docker Security non-events (Conditions Apply<sup>\*</sup>)
-- Do not embed Secret management <small>[Pass Secrets][4], [Manage Secrets][5]</small>
-- Use Image scanning Tools and allow only approved images during build<small>[AWS Native Scanning][6], [Scan with Trivy][7]</small>
+- Do not embed Secret management <small>[How to Pass Secrets][4], [Manage Secrets][5]</small>
+- Use Image scanning Tools and allow only approved images during build <small>[Read about AWS Native Image Scanning][6], [Scan with Trivy][7]</small>
   - Twistlock, Peeker, NeuVector, CoreOS Clair etc.
 - Limit resources like CPU, Memory explicitly, do not use defaults
 - Limit network access
