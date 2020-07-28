@@ -7,19 +7,26 @@
 1. Credentials
 1. What is your _Super Power_
 
-   >Examples:  
-    I can do _almost_ anything in lambda  
-    I _automate_ even simple tasks using bash scripts
+   > _Examples:_  
+   > I can do _almost_ anything in lambda  
+   > I _automate_ even simple tasks using bash scripts  
+   > I am a ninja on Jenkins/Terrform/CDK etc.,
 
-1. Contacts, Whereabout, Social Medial handles etc.,
+1. Your Contacts, Social Media handles that would you like to share
 
 ## Share your customer use case
 
 1. Most Common/Routine Tasks
-    - "Day-In-Life-Of-{Job-Role}"
+   - "Day-In-Life-Of-{Job-Role}"
+1. What does your tools belt look like
+
+   > _Examples:_  
+   > I use _Bash, PyCharm, StackOverflow_ etc.,  
+   > I use Jenkins
+
 1. Most challenging experience
 1. Lessons Learnt
-    - I wish, I knew this before i started `x`
+   - I wish, I knew this before i started doing `x-technology`
 
 ## Share your tips, solution
 
