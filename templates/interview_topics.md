@@ -1,4 +1,4 @@
-# 121 Discussion Topics
+# 1-to-1 Discussion Topics
 
 ## General Session
 
@@ -12,13 +12,20 @@
    > I _automate_ even simple tasks using bash scripts  
    > I am a ninja on Jenkins/Terrform/CDK etc.,
 
-1. Your Contacts, Social Media handles that would you like to share
+1. Your Contacts, Social Media handles that would you like to share with our viewers
 
 ## Share your customer use case
 
 1. Most Common/Routine Tasks
    - "Day-In-Life-Of-{Job-Role}"
-1. What does your tools belt look like
+1. What projects are you working on now?
+
+   > _Examples:_  
+   > I am building ci/cd pipeline to deliver new features to our IoT app
+   > I wrote an script to automate routine ops works - like health checking apps
+   > I am building a "Cloud Centre of Excellance (CCoE)" for a big enterprise
+
+1. What does your tools belt look like?
 
    > _Examples:_  
    > I use _Bash, PyCharm, StackOverflow_ etc.,  
@@ -28,14 +35,19 @@
 1. Lessons Learnt
    - I wish, I knew this before i started doing `x-technology`
 
-## Share your tips, solution
+## Share your tips, solutions, power-tools
 
 1. What is your goto place for getting help
 
+   > _Examples:_  
+   > I check StackOverflow/Valaxy Youtube  
+   > I ask my team-mates, friends  
+   > If nothing works, Start reading the docs.
+
 ## Dive Deep Look
 
-1. What are you learning now?
+1. What are you learning now or planning to learn?
 
 ## Brainstorming
 
-1. What is your advice to new beginners and learners
+1. What is your advice to new beginners and learners?
