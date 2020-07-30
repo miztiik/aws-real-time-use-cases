@@ -25,6 +25,15 @@
    > I wrote an script to automate routine ops works - like health checking apps
    > I am building a "Cloud Centre of Excellance (CCoE)" for a big enterprise
 
+1. What are you most proud of about your work?
+
+   > _Examples:_  
+   > I actively contribute to open source projects & community  
+   > I am a recognized contributor in StackOverflow/Github/Kaggle  
+   > My automation script for consistent db backups is used by many organisations  
+   > I mentored/trained more than 100+ people all over the world  
+   > I fixed a long pending complex production issue and saved \$10K per day
+
 1. What does your tools belt look like?
 
    > _Examples:_  
@@ -46,7 +55,7 @@
 
 ## Dive Deep Look
 
-1. What are you learning now or planning to learn?
+1. What are you learning now or planning to learn & Why did you choose it?
 
 ## Brainstorming
 
