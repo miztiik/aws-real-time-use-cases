@@ -45,7 +45,7 @@
 1. Most challenging experience & What did you to do to overcome it?
 
    > _Examples:_  
-   > I setup up a small PoC to learn about the new tech to learn it in depth
+   > I setup up a small PoC to learn about the new tech to learn it in depth  
    > I enrolled for an online course to learn more
 
 1) Lessons Learnt
