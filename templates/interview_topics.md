@@ -20,6 +20,8 @@
    - "Day-In-Life-Of-{Job-Role}"
 1. What projects are you working on now?
 
+   _ Please be prepared with atleast two project[s] to discuss with the viewers_
+
    > _Examples:_  
    > I am building ci/cd pipeline to deliver new features to our IoT app
    > I wrote an script to automate routine ops works - like health checking apps
@@ -40,8 +42,13 @@
    > I use _Bash, PyCharm, StackOverflow_ etc.,  
    > I use Jenkins
 
-1. Most challenging experience
-1. Lessons Learnt
+1. Most challenging experience & What did you to do to overcome it?
+
+   > _Examples:_  
+   > I setup up a small PoC to learn about the new tech to learn it in depth
+   > I enrolled for an online course to learn more
+
+1) Lessons Learnt
    - I wish, I knew this before i started doing `x-technology`
 
 ## Share your tips, solutions, power-tools
