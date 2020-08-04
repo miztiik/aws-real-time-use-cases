@@ -53,10 +53,11 @@
 
 ## Share your tips, solutions, power-tools
 
-1. What is your goto place for getting help
+1. What is your goto place for getting help when you get stuck on a problem
 
    > _Examples:_  
    > I check StackOverflow/Valaxy Youtube  
+   > Do other work and come back later .
    > I ask my team-mates, friends  
    > If nothing works, Start reading the docs.
 
