@@ -23,8 +23,8 @@
    _ Please be prepared with atleast two project[s] to discuss with the viewers_
 
    > _Examples:_  
-   > I am building ci/cd pipeline to deliver new features to our IoT app
-   > I wrote an script to automate routine ops works - like health checking apps
+   > I am building ci/cd pipeline to deliver new features to our IoT app  
+   > I wrote an script to automate routine ops works - like health checking apps  
    > I am building a "Cloud Centre of Excellance (CCoE)" for a big enterprise
 
 1. What are you most proud of about your work?
@@ -39,17 +39,17 @@
 1. What does your tools belt look like?
 
    > _Examples:_  
-   > I use _Bash, PyCharm, StackOverflow_ etc.,  
+   > I use _Bash, PyCharm, VSCode, StackOverflow_ etc.,  
    > I use Jenkins
 
-1. Most challenging experience & What did you to do to overcome it?
+1) Most challenging experience & What did you to do to overcome it?
 
    > _Examples:_  
    > I setup up a small PoC to learn about the new tech to learn it in depth  
    > I enrolled for an online course to learn more
 
-1. Lessons Learnt
-   - I wish, I knew this before i started doing `x-technology`
+1) Lessons Learnt
+   - I wish, I knew this before i started doing `{FILL_YOUR_TECH_SKILL_STACK_NAME}-technology`
 
 ## Share your tips, solutions, power-tools
 
