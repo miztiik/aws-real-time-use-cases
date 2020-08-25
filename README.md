@@ -26,9 +26,9 @@ A very broad guidance on the `difficulty level` on the topics. These are not wri
 
 ### ✏️ Tips on writing good use-cases
 
-- Use fewer than 35 words per sentence. For example,
-  - _due to the fact that_ use _because_
-  - _totally lacked the ability to_ use _could not_
+- Use fewer than 35 words per sentence.
+  - Instead of, _due to the fact that_ use _because_
+  - Instead of, _totally lacked the ability to_ use _could not_
 - Replace _adjectives_ with _data_
   - Instead of, _We made the performance much faster_ use _We reduced server side latency from `10mn` to `1ms`_
 - Quantify success criteria; Eliminate vague/opaque words
