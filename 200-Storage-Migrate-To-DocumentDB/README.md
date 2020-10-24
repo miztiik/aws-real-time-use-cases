@@ -18,21 +18,31 @@ The `mongodump` create a BSON(_Binary JSON_) dump of your collections. We should
 
 Connect to your mongo instance, ensure your mongodb service is running and run the following commands
 
-    ```bash
-    # sudo su # If necessary create the output directory
-    mkdir -p /var/mongodb_backup
-    mongodump --out=/var/mongodb_backup/ --db=miztiik_db
-    ```
+```bash
+# sudo su # If necessary create the output directory
+mkdir -p /var/mongodb_backup
+mongodump --out=/var/mongodb_backup/ --db=miztiik_db
+```
 
 Now that we have created dump of our database, We are ready to restore this data to the DocumentDB. We need `mongorestore` command to initiate the restoration. You can install it in a EC2 or your dev machine and run it from there. Remember you need to be able access the BSON dump and also the DocumentDB from this EC2/Dev Machine. You can follow [these instructions][4] to install MongoDB Database Tools(including `mongorestore`)
 
 Once you have the tools installed, use the following commands to begin the restoration
 
-    ```bash
-    mongorestore \
-    --uri="mongodb://docsdbadmin:YOUR-PASSWORD@host:27017" \
-    /var/mongodb_backup/
-    ```
+```bash
+cd /var/log
+DOCS_DB_HOST="docdb-2020-10-81-83-14-46.cluster-ca64q8ficuhu.us-east-1.docdb.amazonaws.com:27017"
+DOCS_DB_USER_NAME="docsdbadmin"
+DOCS_DB_PASSWORD="YOUR_DOCS_DB_PASSWORD"
+MONGO_DUMP_DIR="/var/mongodb_backup"
+
+wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+mongorestore --ssl \
+    --host=$DOCS_DB_HOST \
+    --username=$DOCS_DB_USER_NAME \
+    --password=$DOCS_DB_PASSWORD \
+    --sslCAFile rds-combined-ca-bundle.pem \
+    $MONGO_DUMP_DIR
+```
 
 ## 📌 Who is using this
 
@@ -50,6 +60,7 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 
 1. [AWS real time use cases to test your skills][1]
 2. [AWS Database Migration Service][2]
+3. [AWS Docs: mongodump & mongorestore][4]
 
 ### 🏷️ Metadata
 
@@ -58,6 +69,7 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 [1]: https://github.com/miztiik/aws-real-time-use-cases
 [2]: https://aws.amazon.com/dms/
 [3]: https://github.com/miztiik/dms-mongodb-to-documentdb
+[4]: https://docs.aws.amazon.com/documentdb/latest/developerguide/backup_restore-dump_restore_import_export_data.html#backup_restore-dump_restore_import_export_data-mongorestore
 [4]: https://docs.mongodb.com/database-tools/installation/#install-tools
 [100]: https://www.udemy.com/course/aws-cloud-security/?referralCode=B7F1B6C78B45ADAF77A9
 [101]: https://www.udemy.com/course/aws-cloud-security-proactive-way/?referralCode=71DC542AD4481309A441
