@@ -4,7 +4,7 @@
 
 Mystique Unicorn App is a building new application based on microservice architectural pattern. The backend for this app is currently running an Mongodb hosted on EC2 instances. Offlate, the team is finding it hard to find balance their time between managing the mongodb cluster at production scale and doing the app development.
 
-During a recent conference they learnt that aws offers Amzon DocumentDB, a managed database service that is mongodb compatible.
+During a recent conference they learnt that aws offers Amazon DocumentDB, a managed database service that is mongodb compatible.
 
 As an cloud consultant to Mystique Corp, can you help their dev team to migrate from Mongodb to DocumentDB and leave the heavy lifting to AWS?
 
