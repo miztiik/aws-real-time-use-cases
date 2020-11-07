@@ -2,7 +2,7 @@
 
 Repo containing quick starts for real time AWS use cases.
 
-![Miztiik AWS Real Time Use Cases](https://raw.githubusercontent.com/miztiik/aws-real-time-use-cases/master/images/miztiik-aws-real-time-use-cases.png)
+![Miztiik AWS Real Time Use Cases](images/miztiik-aws-real-time-use-cases.png)
 
 ## Who should use this repo
 
