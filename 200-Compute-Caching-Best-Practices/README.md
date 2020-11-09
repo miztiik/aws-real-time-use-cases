@@ -1,26 +1,33 @@
-# BRIEF DESCRIPTION OF PROBLEM
+# What are some best practices in caching?
 
 ## 🔥 Scenario
 
-Describe the problem that needs to be resolved in a crisp manner, yet with enough information to solve it.
+Mystique Corp is developing a cloud native application. They would like to use caching strategies to improve the performance of the application. They are looking for some guidance on what are the caching best practices.
 
--- <cite>[Examples][1]</cite>
+As their cloud consultant can you assist them?.
 
-> Your customer is running Windows, Oracle and few other applications in AWS RDS and EC2. Some of those applications are using 'Bring Your Own License'(BYOL). Now they want to create an inventory of their license in cloud. They want to use the AWS License Manager to manager their license inventory.  
-> \
-> They are finding it difficult to map their BYOL license with AWS License Manager, as the product is having limitations with BYOL as on Q1 2020. Can you help them?
+## 🎯 Solutions
 
-## 📋 Next Steps
+![Miztiik Automation: What to Cache](images/miztiik_what_to_cache_architecture_00.png)
 
-1. What actions will you take?
-1. How will you test your solution?
-1. Can you automate its deployment and improve its re-usability as a bonus feature?
+- Understand the frequency of change of underlying data
+- Set appropriate TTLs on keys that match that frequency
+- Choose appropriate eviction policies that are aligned with application requirements
+- Isolate your cluster by purpose (for example, cache cluster, queue, standalone database, and so on)
+- Maintain cache freshness with write-throughs
+- Performance test and size your cluster appropriately
+- Monitor Cache HIT/MISS ratio and alarm on poor performance
+- Use failover API to test application resiliency
 
-## 🎯Solutions
+After decidin on those items, let us assume the application is a ecommerce site, then we can follow a similar strategy
 
-Placeholder for solution brief
+- _product categories_ (user longer TTLs)
+- _product images_ (user longer TTLs)
+- _product details_ (user longer TTLs)
+- _database result sets_: (user shorter TTLs)
+- _API responses_ (user shorter TTLs)
 
--- <cite>[Solution Examples][2]</cite>
+**Anything that is cacheable! should be cached**. Also remember _cache invalidation_ is a hard problem.
 
 ## 📌 Who is using this
 
