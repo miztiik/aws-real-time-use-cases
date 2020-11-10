@@ -27,7 +27,6 @@ from botocore.client import Config
 S3_BUCKET_NAME="your_bucket_name_goes_here"
 OBJECT_KEY_NAME="tentative_customer_object_file_name"
 
-
 # Get the service client with sigv4 configured
 s3 = boto3.client("s3", config=Config(signature_version="s3v4"))
 
