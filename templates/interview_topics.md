@@ -68,3 +68,5 @@
 ## Brainstorming
 
 1. What is your advice to new beginners and learners?
+
+![miztiik-real-time-use-cases](https://img.shields.io/badge/Miztiik:Tech--Discussions:Level-300-purple)

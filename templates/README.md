@@ -28,11 +28,11 @@ This repository teaches developers, Solution Architects & Ops Engineers how to b
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here](/issues)
+Thank you for your interest in contributing to our project. Whether it is a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here](/issues)
 
 ### 👋 Buy me a coffee
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41QDGK)Buy me a [coffee ☕][900].
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41QDGK) Buy me a [coffee ☕][900].
 
 ### 📚 References
 
@@ -41,6 +41,8 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 ### 🏷️ Metadata
 
 **Level**: 300
+
+![miztiik-real-time-use-cases](https://img.shields.io/badge/Miztiik:Real--Time--Use--Cases:Level-300-green)
 
 [1]: https://github.com/miztiik/aws-real-time-use-cases
 [100]: https://www.udemy.com/course/aws-cloud-security/?referralCode=B7F1B6C78B45ADAF77A9

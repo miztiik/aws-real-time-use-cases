@@ -38,15 +38,16 @@ A very broad guidance on the `difficulty level` on the topics. These are not wri
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
+Thank you for your interest in contributing to our project. Whether it is a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here](/issues)
 
 ### 👋 Buy me a coffee
 
-Buy me a [coffee ☕][900].
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41QDGK) Buy me a [coffee ☕][900].
 
 ### 🏷️ Metadata
 
 **Level**: 300
+![miztiik-real-time-use-cases](https://img.shields.io/badge/Miztiik:Real--Time--Use--Cases:Level-300-green)
 
 [100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
 [200]: https://github.com/miztiik/aws-real-time-use-cases/issues
