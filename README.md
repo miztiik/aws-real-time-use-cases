@@ -26,9 +26,22 @@ A very broad guidance on the `difficulty level` on the topics. These are not wri
 
 ### ✏️ Tips on writing good use-cases
 
-- Make your titles succinct, informative, compelling, and written with the audience in mind
+- **Titles** - Make your titles succinct, informative, compelling, and written with the audience in mind
   - Keep it to a single line
   - Use Keywords(not jargons) and verbs
+- Structure your use-case into 3 segments
+  - **Beginning**
+    - Introduce who (or your organisation) you are
+    - Describe the business challenge
+    - Explain the impact of the challenge
+  - **Middle/Solution**
+    - Describe the technical challenge
+    - Describe the plan
+    - Explain(if possible) what were the choices and trade-offs
+  - **End/Conclusion**
+    - Give usecase examples
+    - Describe technical & business benefits
+    - Explain how this solution can be extended or future roadmap
 - Use fewer than 35 words per sentence.
   - Instead of, _due to the fact that_ use _because_
   - Instead of, _totally lacked the ability to_ use _could not_
@@ -38,6 +51,8 @@ A very broad guidance on the `difficulty level` on the topics. These are not wri
   - Instead of, _nearly all customers_ use _`83%` of the premium members_
   - Instead of, _significantly better_ use _NPS `6.5 (+25% YoY)`_
 - Does your use-case clear the _so what_ check?
+
+Check out this [sample template](/templates/README.md)
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
