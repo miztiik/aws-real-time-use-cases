@@ -26,6 +26,9 @@ A very broad guidance on the `difficulty level` on the topics. These are not wri
 
 ### ✏️ Tips on writing good use-cases
 
+- Make your titles succinct, informative, compelling, and written with the audience in mind
+  - Keep it to a single line
+  - Use Keywords(not jargons) and verbs
 - Use fewer than 35 words per sentence.
   - Instead of, _due to the fact that_ use _because_
   - Instead of, _totally lacked the ability to_ use _could not_
