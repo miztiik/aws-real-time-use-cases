@@ -1,8 +1,8 @@
-# When to choose SNS or SQS for your event driven architecture
+# What are my choices for event routers in AWS & When to choose them?
 
 ## 🔥 Scenario
 
-When you are developing new applications, one of the common questions that comes up is that, When to choose SQS or SNS for message delivery.
+When you are developing new applications, one of the common questions that comes up is that, What are the choices you have and When to choose say SQS or SNS or EventBridge or Kinesis etc
 
 ## 🎯Solutions
 
@@ -10,7 +10,7 @@ Both SNS and SQS have their own benefits and are ideally suited for specific nee
 
 Here is a simple decision tree that makes it easier for new developers to get them thinking about the requirements that are important to them and follow along that path.
 
-![miztiik-real-time-use-cases](images/miztiik_automation_event_driven_sns_vs_sqs.png)
+![miztiik-real-time-use-cases](images/miztiik_automation_event_driven_architecture_choices.png)
 
 For example, If your architecture requires `fan-out` and `rate limiting` you can use a combination of both SNS (for fanout) and SQS (for rate limiting)
 
