@@ -1,26 +1,25 @@
-# BRIEF DESCRIPTION OF PROBLEM
+# API Management: Factors to consider
 
 ## 🔥 Scenario
 
-Describe the problem that needs to be resolved in a crisp manner, yet with enough information to solve it.
+Your organisation is building multiple apis. Some of them are exposed to the public and some of them are private end points. They have plans to monetize these apis. They are considering a free and premium tiers for their apis. They found there are many things to consider before deciding upon an API management platform that would allow them to easily manage multiple apis and scale along with the business needs.
 
--- <cite>[Examples][1]</cite>
-
-> Your customer is running Windows, Oracle and few other applications in AWS RDS and EC2. Some of those applications are using 'Bring Your Own License'(BYOL). Now they want to create an inventory of their license in cloud. They want to use the AWS License Manager to manager their license inventory.  
-> \
-> They are finding it difficult to map their BYOL license with AWS License Manager, as the product is having limitations with BYOL as on Q1 2020. Can you help them?
-
-## 📋 Next Steps
-
-1. What actions will you take?
-1. How will you test your solution?
-1. Can you automate its deployment and improve its re-usability as a bonus feature?
+Can you help to with some qualification criteria that they can use to evaluate their options.
 
 ## 🎯Solutions
 
-Placeholder for solution brief
+Here are some of things that you might want to consider, when you want to manage apis at scale.
 
--- <cite>[Solution Examples][2]</cite>
+- **Deployment Complexity**
+- **Data Stores Required**
+- **Open Source**
+- **Core Technology**
+- **On Premise**
+- **Community/Extensions**
+- **Authorization/API Keys**
+- **Rate Limiting**
+- **Data Transformation**
+- **Integrated Billing**
 
 ## 📌 Who is using this
 
