@@ -1,89 +1,61 @@
-# Securing Containers
+# Migrate Containers To Cloud
 
 ## 🔥 Scenario
 
-Mystique Unicorn App is a containerized microservice. The App Security Board had been recently formed to improve the security of this fast growing mobile app. During the first security audit, It was observed that the containers being used in this app are not secured properly.
+Mystique Unicorn App is running lot of containerized applications onprem. They are evaluation public cloud to run their containers..
 
-As you are the cloud security expert, Mysitque Unicorn seeks your advice on how to secure their containers. Can you help them?
+As you are their containers expert, Mystique Unicorn seeks your advice. Can you help them?
 
 ## 🎯Solutions
 
-We can leverage [AWS Well Architected: Security Pillar][2] and its seven pillars to secure our containerized workloads. The design principles are,
+There are many container orchestration tools that can be used for container lifecycle management. Some popular options are Kubernetes, Docker Swarm, and Apache Mesos. When you are planning to move containers from an existing platform to a newer one, you can use following items as a starting point for your journey,
 
-- Implement a strong identity foundation
-- Enable traceability
-- Apply security at all layers
-- Automate security best practices
-- Protect data in transit and at rest
-- Keep people away from data
-- Prepare for security events
+1. ### Cluster information
 
-We can apply these principles to the lifecycle of the container - Image Build, Container runtime, Image retirment. In addition to that, these talks [Best practices for CI/CD using AWS Fargate and Amazon ECS][30], [AWS Container Security 101][31] and [this][32] and [this][33] details some of the points highlighted below.
+   - Docker version
+   - Orchestration engine? K8S\Mesos
+   - Orchestration engine version?
+   - Is the K8s version compatible with the application?
+   - Is there any custom code in the compilation engine?
+   - What is the cluster size?
+   - Where is cluster deployed? IDC\Cloud
+   - What platform is deployed on? Rancher\OpenShift\Kops\ACK\GKE\AKS\Kubeadm
+   - Is there a Windows node?
+   - What plug-in is used? CNI, CSI, Cluster Autoscaler, Ingress, etc.
+   - Is it a stateful application?
+   - What type of storage driver is used?
+   - How much data is stored in the local disk?
+   - What is the full path of the data storage?
+   - Which type of storage is used? Volume, CSI, EFS, etc.
+   - Which type of network is used? Flannel/Calico/McVlan
+   - How is service discovery achieved? ZK, Eureka
+   - Which framework does the microservice use? Dubbo/ Spring cloud
 
-### Building Docker Images - Best Practices
+1. ### Log collection solution
 
-- Use minimal/trusted base images
-- Sign images and verify signature
-- Scan and rebuild images
-- Specify USER in Dockerfile (otherwise it’s root)
-- Use COPY, not ADD in Dockerfile
-- One service per container
-  - Use sidecars within task/pod
-- Minimise container footprint / Reduce container attack surface area
-  - Include only what is needed at runtime
-- Use Unique and informative image tags
-- Implement a strong identity foundation
-- Remove setuid/setgid permissions in images
-- Enable traceability
-- Do not run things as root/privileged containers
-- Do not store secrets in Dockerfile
-- Do not use update instructions only in Dockerfile
-- No console troubleshooting tools
-  - _For Example,_ AWS Fargate does not let you docker exec onto the tasks anyway so adding tools for troubleshooting in container image is not helpful.
+   - Which log collection tools are used? Filebeat, Flume, Fluentd, etc.
+   - What is the deployment method? Build in Image/ Sidecar
 
-### Security in Deployment Layer (CI/CD) – Best Practices
+1. ### Monitoring solution
 
-Build security into the entire CI/CD process including runtime
+   - Which monitoring tool is used? Prometheus/Zabbix
+   - Which kind of dashboard is used? Kibana/Grafana
+   - What are metrics needed to monitor?
 
-- Use private respository endpoints <small>[VPCE][8], [ECR PrivateLink][9]</small>
-- CIS (Center for Internet Security) Docker Benchmark <small>[Read More..][20]</small>
-- Use latest versions
-  - Docker CVE Database
-  - Docker Security non-events (Conditions Apply<sup>\*</sup>)
-- Do not embed Secret management <small>[How to Pass Secrets][4], [Manage Secrets][5]</small>
-- Use Image scanning Tools and allow only approved images during build <small>[Read about AWS Native Image Scanning][6], [Scan with Trivy][7]</small>
-  - Twistlock, Peeker, NeuVector, CoreOS Clair etc.
-- Limit resources like CPU, Memory explicitly, do not use defaults
-- Limit network access
-- Credential Isolation: Restrict permission associated with container role
-  - Container can only retrieve credentials for the IAM role that is defined in the task definition to which it belongs
+1. ### CI/CD solution
 
-### Security in Compute Layer - Runtime best practices
+   - Which pipeline solution is used? Jenkins/Spinnaker/GitOps
+   - Which package tool is used? Helm chart / Kustomize
+   - What are the source code repositories? GitHub/Gitlab/SVN
 
-- Mount container's root filesystem as read only
-- Use OS tools like `SELinux`
-- Run containers with the least IAM privileges
-- Limit memory usage for container
-- Limit network reachability of your containers
-- Do not share the host's process namespace
-- Implement mechanisms to monitor running containers
-  - Vulnerability Scan
-  - Map container traffic
-  - Monitor traffic
-- Logging & Audit
-  - App Logs, API Logs, CloudTrail/Admin Logs, DNS Logs
+1. ### Image Repository
 
-### Automate Security Governance – Best Practices
-
-Governance can be achieved during continuous integration, by enabling the security teams to deploy security containers as part of the process.
-
-- Enable the security team to deploy security containers such as host intrusion detection in parallel
-- Use an automation tool like AWS CodeBuild/Jenkins to build both application and security containers, merge both task definitions and then deploy
-- Allow security teams to deploy security without having to bake it into the application image(_aka Sidecar containers_)
-
-##### DevSecOps Workshop
-
-- [Dev Sec Ops Workshops][3]
+   - Which image repository is used? Docker Repository/Harbor
+   - How many images are there?
+   - Business impact
+   - How long is the business interruption?
+   - Is there any dependencies between business systems?
+   - Is it feasible to migrate in stages?
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
@@ -103,31 +75,13 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 
 ### 📚 References
 
-1. [AWS Security Whitepaper][1]
-1. [AWS Well-Architected Framework: Security Pillar][2]
-1. [AWS Overview of Security Processes whitepaper][1]
-1. [CIS Docker Benchmark][20]
-1. [Securing Container Workloads on AWS Fargate][32]
-1. [All in on AWS Fargate for high-security workloads][33]
+1. [Miztiik Blogs - Container Security][1]
 
 ### 🏷️ Metadata
 
-**Level**: 300
+**Level**: 200
 
-[1]: https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Whitepaper.pdf
-[2]: https://wa.aws.amazon.com/wat.pillar.security.en.html
-[3]: https://container-devsecops.awssecworkshops.com
-[4]: https://aws.amazon.com/premiumsupport/knowledge-center/ecs-data-security-container-task/
-[5]: https://aws.amazon.com/blogs/security/how-to-manage-secrets-for-amazon-ec2-container-service-based-applications-by-using-amazon-s3-and-docker/
-[6]: https://aws.amazon.com/blogs/containers/amazon-ecr-native-container-image-scanning/
-[7]: https://aws.amazon.com/blogs/containers/scanning-images-with-trivy-in-an-aws-codepipeline/
-[8]: https://aws.amazon.com/blogs/containers/using-vpc-endpoint-policies-to-control-amazon-ecr-access/
-[9]: https://aws.amazon.com/blogs/containers/aws-privatelink-ecr-cross-account-fargate-deployment/
-[20]: https://www.cisecurity.org/benchmark/docker/
-[30]: https://www.youtube.com/watch?v=7FVK0i9edyg
-[31]: https://www.youtube.com/watch?v=Cp4rdlsQORo
-[32]: https://www.youtube.com/watch?v=PkR2hu1HCCY
-[33]: https://www.youtube.com/watch?v=gNDi6l2tIws
+[1]: https://github.com/miztiik/aws-real-time-use-cases/tree/master/300-Security-Containers
 [101]: https://www.udemy.com/course/aws-cloud-security-proactive-way/?referralCode=71DC542AD4481309A441
 [102]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
 [103]: https://www.udemy.com/course/aws-cloudformation-basics?referralCode=93AD3B1530BC871093D6
@@ -135,12 +89,3 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 [899]: https://www.udemy.com/user/n-kumar/
 [900]: https://ko-fi.com/miztiik
 [901]: https://ko-fi.com/Q5Q41QDGK
-
-CON334-R1 – Running high-security workloads on Amazon EKS
-CON315-R1 – Deep dive: Observability of Kubernetes applications
-CON317-R2 – Securing your Amazon EKS cluster
-CON414-R3 – Security best practices for AWS Fargate
-CON317-R3 – Securing your Amazon EKS cluster
-GRC340 - Container runtime security and automation
-SEP309 - Containers and mission-critical applications
-SDD401 - Securing enterpris-grade serverless applications
