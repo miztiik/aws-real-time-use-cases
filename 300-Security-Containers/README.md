@@ -2,7 +2,7 @@
 
 ## 🔥 Scenario
 
-Mystique Unicorn App is running lot of containerized applications onprem. They are evaluation public cloud to run their containers..
+Mystique Unicorn App is running lot of containerized applications onprem. They are evaluating public cloud to run their containers.
 
 As you are their containers expert, Mystique Unicorn seeks your advice. Can you help them?
 

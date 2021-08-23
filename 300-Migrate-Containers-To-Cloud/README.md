@@ -1,47 +1,61 @@
-# Migrate To Containers
+# Migrate Containers To Cloud
 
 ## 🔥 Scenario
 
-Mystique Unicorn App is looking to modernise their application stack. They have few applications running in their onprem data centres and considering to move them to containers. Before they begin, They would like to know the best practices when running applications inside containers.
+Mystique Unicorn App is running lot of containerized applications onprem. They are evaluating public cloud to run their containers.
 
 As you are their containers expert, Mystique Unicorn seeks your advice. Can you help them?
 
-## 🎯 Solutions
+## 🎯Solutions
 
-When thinking about migrating applications into containers, approach containers with the mindset that your application is made up of smaller units, and the packaging of those units into something easily consumable. This will make your containerized application easier to understand, deploy, and maintain.
-You need to look at your application and think about each of the pieces and how they work together—similar to the way you can break up a program into a series of classes and functions.
+There are many container orchestration tools that can be used for container lifecycle management. Some popular options are Kubernetes, Docker Swarm, and Apache Mesos. When you are planning to move containers from an existing platform to a newer one, you can use following items as a starting point for your journey,
 
-Applications have specific requirements have to be understood from their architectural, security, and performance perspectives
+1. ### Cluster information
 
-### 📐 Architecture
+   - Docker version
+   - Orchestration engine? K8S\Mesos
+   - Orchestration engine version?
+   - Is the K8s version compatible with the application?
+   - Is there any custom code in the compilation engine?
+   - What is the cluster size?
+   - Where is cluster deployed? IDC\Cloud
+   - What platform is deployed on? Rancher\OpenShift\Kops\ACK\GKE\AKS\Kubeadm
+   - Is there a Windows node?
+   - What plug-in is used? CNI, CSI, Cluster Autoscaler, Ingress, etc.
+   - Is it a stateful application?
+   - What type of storage driver is used?
+   - How much data is stored in the local disk?
+   - What is the full path of the data storage?
+   - Which type of storage is used? Volume, CSI, EFS, etc.
+   - Which type of network is used? Flannel/Calico/McVlan
+   - How is service discovery achieved? ZK, Eureka
+   - Which framework does the microservice use? Dubbo/ Spring cloud
 
-From an architectural perspective to move applications into containers, At a minimum, you must be able to answer the following questions:
+1. ### Log collection solution
 
-1. Where are the binaries for this application? Can you automate the installation and configuration?
+   - Which log collection tools are used? Filebeat, Flume, Fluentd, etc.
+   - What is the deployment method? Build in Image/ Sidecar
 
-   - Use layers—think about core builds and application runtime layers
-   - Identify dependencies and determine if previous layers should contain the dependencies, especially if they can be shared or used by other applications.
-   - Identify how the binaries will be started: script, systemd, etc.
+1. ### Monitoring solution
 
-1. Where does all of the configuration data reside? (_For ex: Date, Time, Locale settings_)
-1. Does the application requires changes to kernel parameters (`/proc/sys`) or access to
-   special hardware.
-1. Where does the application store its state data?
-1. What kind of data classification does this application process?
-1. What kind of network access does this application need?
-1. Does the application's licensing allow you to easily distribute the application inside of a container image?
+   - Which monitoring tool is used? Prometheus/Zabbix
+   - Which kind of dashboard is used? Kibana/Grafana
+   - What are metrics needed to monitor?
 
-![Miztiik Engineering: Migrate To Containers](images/migrate_to_containers_miztiik.png)
+1. ### CI/CD solution
 
-### 👮 Security
+   - Which pipeline solution is used? Jenkins/Spinnaker/GitOps
+   - Which package tool is used? Helm chart / Kustomize
+   - What are the source code repositories? GitHub/Gitlab/SVN
 
-You can refer this blog for knowing more about securing your containers[1].
+1. ### Image Repository
 
-### Performance
-
-Containers are linux processes that use technologies, such as control groups (cgroups), SecurityEnhanced Linux (SELinux), and namespaces to provide a higher level of isolation to applications. This allows them to run at native or near native speed.
-
-- Workloads must also be analyzed for performance
+   - Which image repository is used? Docker Repository/Harbor
+   - How many images are there?
+   - Business impact
+   - How long is the business interruption?
+   - Is there any dependencies between business systems?
+   - Is it feasible to migrate in stages?
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
