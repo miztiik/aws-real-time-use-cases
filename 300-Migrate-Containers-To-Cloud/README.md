@@ -10,6 +10,19 @@ As you are their containers expert, Mystique Unicorn seeks your advice. Can you 
 
 There are many container orchestration tools that can be used for container lifecycle management. Some popular options are Kubernetes, Docker Swarm, and Apache Mesos. When you are planning to move containers from an existing platform to a newer one, you can use following items as a starting point for your journey,
 
+1. ### Current setup
+   - How do you run containers today? On-prem or in cloud or managed cloud services?
+   - How do your teams provision, secure and manage orchestration software and container clusters?
+   - How do your teams plan, provision, patch and manage server nodes for clusters?
+   - What orchestration software are you running today?
+
+1. ### What are the challenges with your current setup, if any?
+   - Cost, lack of automation, lack of support, high operational burden, etc?
+
+1. ### Are there other considerations
+   - Security or regulatory compliance?
+   - Need for on-premise solution?
+
 1. ### Cluster information
 
    - Docker version
